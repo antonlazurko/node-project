@@ -1,0 +1,11 @@
+{
+	"watch": [
+		"./"
+	],
+	"ext": "js,json",
+	"ignore": [
+		"src/**/*.spec.js"
+	],
+	"exec": "node index.js",
+    "quiet": true
+}
