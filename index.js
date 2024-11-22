@@ -4,14 +4,16 @@ import morgan from 'morgan';
 import path from 'path';
 import fs from 'fs';
 
-import rootRouter from './routes/index.js';
+import mainRouter from './routes/index.js';
 
 const app = express();
 
 const logStream = fs.createWriteStream(path.join('log', 'app.log'), { flags: 'a' });
 
+app.use(express.json());
 app.use(morgan('combined', { stream: logStream }));
+app.use(morgan('dev'));
 
-app.use('/', rootRouter);
+app.use('/', mainRouter);
 
 app.listen(8000, () => console.log('Listening on port 8000!'));
