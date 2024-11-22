@@ -1,3 +1,4 @@
 {
-    "extends": "airbnb"
+    "extends": "airbnb",
+    "import/extensions": ["error", "ignorePackages"]
 }
