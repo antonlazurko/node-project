@@ -6,7 +6,7 @@ function App() {
 
   const onFetch = () => {
     try {
-      fetch('http://localhost:8000/comments')
+      fetch('http://localhost:8000')
         .then((res) => res.json())
         .then((data) => setData(data))
         .catch((error) => {
